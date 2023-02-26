@@ -5,6 +5,14 @@ function App() {
   const [temp, setTemp] = useState(20);
   const [tempCol, setTempCol] = useState("");
 
+  const checkTmp = (temp) => {
+    if (temp > 25) {
+      setTempCol("hot");
+    } else if (temp < 15) {
+      setTempCol("cold");
+    } else setTempCol("");
+  };
+
   return (
     <div className="container">
       <div className="temp-display" id={`${tempCol}`}>
@@ -14,6 +22,7 @@ function App() {
         <button
           onClick={() => {
             setTemp(temp - 1);
+            checkTmp(temp);
           }}
         >
           -
@@ -21,6 +30,7 @@ function App() {
         <button
           onClick={() => {
             setTemp(temp + 1);
+            checkTmp(temp);
           }}
         >
           +
