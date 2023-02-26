@@ -43,4 +43,34 @@ body {
     box-shadow: rgb(117, 186, 84) 0px 0px 12px;
     -webkit-text-stroke: 1px #716868;
   }
+  > .control-buttons {
+    display: flex;
+    > button {
+      width: 100px;
+      height: 52px;
+      font-weight: 700;
+      font-size: 48px;
+      color: #6ede8a;
+      border-radius: 3px;
+      border: none;
+      margin: 3rem 1rem 1rem 1rem;
+      -webkit-text-stroke: 1px #575757;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 2px solid rgb(117, 186, 84, 0.7);
+      &:hover {
+        border: 2px solid rgb(117, 186, 84, 0.7);
+        box-shadow: rgb(117, 186, 84) 0px 0px 12px;
+      }
+    }
+  }
+}
+
+.cold {
+  background-color: #affc41;
+}
+.hot {
+  background-color: #ea5454;
 }
